@@ -36,6 +36,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SelectedTrack.track =  self.route
         // Set the track to be two points for now
         self.route.track.append((GPSPoint(1,1), GPSPoint(2,2)))
         self.route.track.append((GPSPoint(3,3), GPSPoint(4,4)))

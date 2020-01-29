@@ -15,6 +15,8 @@
 		CECA6A6823DCD2680051A15A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECA6A6623DCD2680051A15A /* LaunchScreen.storyboard */; };
 		CECA6A7023E10E030051A15A /* GPSPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A6F23E10E030051A15A /* GPSPoint.swift */; };
 		CECA6A7223E112260051A15A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A7123E112260051A15A /* Route.swift */; };
+		CECA6A7623E2332E0051A15A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A7523E2332E0051A15A /* MapViewController.swift */; };
+		CECA6A7823E236C20051A15A /* SelectedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A7723E236C20051A15A /* SelectedTrack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CECA6A6923DCD2680051A15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECA6A6F23E10E030051A15A /* GPSPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSPoint.swift; sourceTree = "<group>"; };
 		CECA6A7123E112260051A15A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		CECA6A7523E2332E0051A15A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CECA6A7723E236C20051A15A /* SelectedTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTrack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				CECA6A5B23DCD2670051A15A /* AppDelegate.swift */,
 				CECA6A5D23DCD2670051A15A /* SceneDelegate.swift */,
 				CECA6A5F23DCD2670051A15A /* ViewController.swift */,
+				CECA6A7723E236C20051A15A /* SelectedTrack.swift */,
+				CECA6A7523E2332E0051A15A /* MapViewController.swift */,
 				CECA6A6123DCD2670051A15A /* Main.storyboard */,
 				CECA6A6F23E10E030051A15A /* GPSPoint.swift */,
 				CECA6A7123E112260051A15A /* Route.swift */,
@@ -145,9 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECA6A6023DCD2670051A15A /* ViewController.swift in Sources */,
+				CECA6A7623E2332E0051A15A /* MapViewController.swift in Sources */,
 				CECA6A7023E10E030051A15A /* GPSPoint.swift in Sources */,
 				CECA6A5C23DCD2670051A15A /* AppDelegate.swift in Sources */,
 				CECA6A7223E112260051A15A /* Route.swift in Sources */,
+				CECA6A7823E236C20051A15A /* SelectedTrack.swift in Sources */,
 				CECA6A5E23DCD2670051A15A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
