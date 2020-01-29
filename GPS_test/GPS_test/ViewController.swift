@@ -15,6 +15,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     var location: GPSPoint = GPSPoint(0,0)
     var timeAtStartGate: Double = 0
     var route: Route = Route()
+    var lastGatePassed: Int = 0;
 
     @IBOutlet weak var g1lo1: UILabel!
     @IBOutlet weak var g1la1: UILabel!
@@ -58,16 +59,24 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         self.lastknownlat.text = String("\(self.location.latitude)")
         self.lastknownlong.text = String("\(self.location.longitude)")
         self.lastknowntime.text = String("\(NSDate())")
+        let time = NSDate().timeIntervalSince1970
         
         if(self.route.hasPassedThroughGate(0, pastLocation, location)){
             self.timeAtStartGate = NSDate().timeIntervalSince1970
+            self.lastGatePassed = 1
+            self.lastThroughGate1.text = String("\(time - timeAtStartGate)")
         }
         
-        if(self.route.hasPassedThroughGate(1, pastLocation, location)){
+        if(self.route.hasPassedThroughGate(1, pastLocation, location) && self.lastGatePassed == 1){
             self.lastThroughGate1.text = String("\(NSDate().timeIntervalSince1970 - timeAtStartGate)")
+            self.lastGatePassed = 2
         }
     }
     
+    @IBAction func restartClicked(_ sender: Any) {
+        self.lastGatePassed = 0;
+        self.lastThroughGate1.text = "Awaiting Start"
+    }
     
     @IBAction func SetG1p1(_ sender: Any) {
         self.route.track[0].0.update(self.location.latitude, self.location.longitude)

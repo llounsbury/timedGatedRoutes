@@ -157,11 +157,19 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zt9-Hq-sg6">
+                                <rect key="frame" x="256" y="20" width="50" height="30"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3z-74-KG2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5ZK-ig-amB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dez-j2-r1P"/>
                             <constraint firstItem="vJ8-tB-7b2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="GnS-qe-kUx"/>
+                            <constraint firstItem="Zt9-Hq-sg6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Hq9-HX-cn2"/>
                             <constraint firstItem="5ZK-ig-amB" firstAttribute="top" secondItem="Hxr-JM-cof" secondAttribute="bottom" constant="8" id="KyS-Mh-dhy"/>
                             <constraint firstItem="Hxr-JM-cof" firstAttribute="top" secondItem="aFg-dd-Ewh" secondAttribute="bottom" constant="8" id="Lmq-b2-ZYk"/>
                             <constraint firstItem="Hxr-JM-cof" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oqf-mv-WBW"/>
@@ -170,6 +178,7 @@
                             <constraint firstItem="vJ8-tB-7b2" firstAttribute="top" secondItem="5ZK-ig-amB" secondAttribute="bottom" constant="52" id="WSr-Pl-u2Q"/>
                             <constraint firstItem="aFg-dd-Ewh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ecv-tr-JCs"/>
                             <constraint firstItem="5Dk-V6-3sH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hCG-z1-av1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zt9-Hq-sg6" secondAttribute="trailing" constant="14" id="nz2-Lb-iq1"/>
                             <constraint firstItem="4Kd-3V-JWC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="rH0-rT-k7t"/>
                             <constraint firstItem="5Dk-V6-3sH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uGa-vO-hr5"/>
                         </constraints>
