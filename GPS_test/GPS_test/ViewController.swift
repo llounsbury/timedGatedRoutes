@@ -186,7 +186,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         // Find the four orientations needed for general and
         // special cases
         let o1 = orientation(gate2lat1, gate2long1, gate2lat2, gate2long2, latitude, longitude)
-        let o2 = orientation(gate2lat1, gate2long1, gate2lat2, gate1long2, latitudeOld, longitudeOld)
+        let o2 = orientation(gate2lat1, gate2long1, gate2lat2, gate2long2, latitudeOld, longitudeOld)
         let o3 = orientation(latitude, longitude, latitudeOld, longitudeOld, gate2lat1, gate2long1 )
         let o4 = orientation(latitude, longitude, latitudeOld, longitudeOld, gate2lat2, gate2long2 )
 
