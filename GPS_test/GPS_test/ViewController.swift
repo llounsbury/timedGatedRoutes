@@ -30,6 +30,8 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
     var gate2lat2: Double = 0
     var gate2long2: Double = 0
     
+    var test: GPSPoint = GPSPoint(123,123)
+    
     @IBOutlet weak var g1lo1: UILabel!
     @IBOutlet weak var g1la1: UILabel!
     @IBOutlet weak var g1lo2: UILabel!
