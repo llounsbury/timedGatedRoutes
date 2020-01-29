@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var MapFrame: MKMapView!
 
@@ -17,32 +17,27 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(SelectedTrack.track.track[0].0.latitude,SelectedTrack.track.track[0].0.longitude), latitudinalMeters: 200, longitudinalMeters: 200)
+        MapFrame.delegate = self
+        
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(SelectedTrack.track.track[0].0.latitude,SelectedTrack.track.track[0].0.longitude), latitudinalMeters: 200, longitudinalMeters: 200)
         MapFrame.setRegion(region, animated: true)
         
         for gate in SelectedTrack.track.track {
-            var annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(gate.0.latitude,gate.0.longitude)
-            MapFrame.addAnnotation(annotation)
+            var points = [CLLocationCoordinate2D]()
+            points.append(CLLocationCoordinate2DMake(gate.0.latitude, gate.0.longitude))
+            points.append(CLLocationCoordinate2DMake(gate.1.latitude, gate.1.longitude))
+            let annotation = MKPolyline(coordinates: points, count: 2)
+            MapFrame.addOverlay(annotation)
         }
-        
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if (overlay is MKPolyline) {
+            let pr = MKPolylineRenderer(overlay: overlay)
+            pr.strokeColor = UIColor.red.withAlphaComponent(0.5)
+            pr.lineWidth = 5
+            return pr
+        }
+        return MKPolylineRenderer(overlay: overlay)
     }
-    */
-
 }
