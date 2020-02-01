@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE6AB0B023E53EDD00F1A5B4 /* TrackGateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AB0AF23E53EDD00F1A5B4 /* TrackGateScreen.swift */; };
+		CE6AB0B223E541E900F1A5B4 /* TrackGateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AB0B123E541E900F1A5B4 /* TrackGateCell.swift */; };
 		CECA6A5C23DCD2670051A15A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A5B23DCD2670051A15A /* AppDelegate.swift */; };
 		CECA6A5E23DCD2670051A15A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A5D23DCD2670051A15A /* SceneDelegate.swift */; };
 		CECA6A6023DCD2670051A15A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA6A5F23DCD2670051A15A /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE6AB0AF23E53EDD00F1A5B4 /* TrackGateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGateScreen.swift; sourceTree = "<group>"; };
+		CE6AB0B123E541E900F1A5B4 /* TrackGateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGateCell.swift; sourceTree = "<group>"; };
 		CECA6A5823DCD2670051A15A /* GPS_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPS_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECA6A5B23DCD2670051A15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECA6A5D23DCD2670051A15A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,11 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				CECA6A5B23DCD2670051A15A /* AppDelegate.swift */,
+				CE6AB0AF23E53EDD00F1A5B4 /* TrackGateScreen.swift */,
 				CECA6A5D23DCD2670051A15A /* SceneDelegate.swift */,
 				CECA6A5F23DCD2670051A15A /* ViewController.swift */,
 				CECA6A7723E236C20051A15A /* SelectedTrack.swift */,
 				CECA6A7523E2332E0051A15A /* MapViewController.swift */,
 				CECA6A6123DCD2670051A15A /* Main.storyboard */,
+				CE6AB0B123E541E900F1A5B4 /* TrackGateCell.swift */,
 				CECA6A6F23E10E030051A15A /* GPSPoint.swift */,
 				CECA6A7123E112260051A15A /* Route.swift */,
 				CECA6A6423DCD2680051A15A /* Assets.xcassets */,
@@ -152,10 +158,12 @@
 			files = (
 				CECA6A6023DCD2670051A15A /* ViewController.swift in Sources */,
 				CECA6A7623E2332E0051A15A /* MapViewController.swift in Sources */,
+				CE6AB0B223E541E900F1A5B4 /* TrackGateCell.swift in Sources */,
 				CECA6A7023E10E030051A15A /* GPSPoint.swift in Sources */,
 				CECA6A5C23DCD2670051A15A /* AppDelegate.swift in Sources */,
 				CECA6A7223E112260051A15A /* Route.swift in Sources */,
 				CECA6A7823E236C20051A15A /* SelectedTrack.swift in Sources */,
+				CE6AB0B023E53EDD00F1A5B4 /* TrackGateScreen.swift in Sources */,
 				CECA6A5E23DCD2670051A15A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
