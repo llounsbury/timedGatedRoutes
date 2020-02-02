@@ -242,37 +242,38 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIC-pN-680">
-                                                    <rect key="frame" x="15" y="11.5" width="37" height="21"/>
+                                                    <rect key="frame" x="15" y="11.5" width="37" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COORDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO4-aU-OeX">
-                                                    <rect key="frame" x="79" y="11.5" width="71" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COORDS2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNn-U2-PxZ">
-                                                    <rect key="frame" x="184" y="11.5" width="81" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sef-xh-T4Z">
+                                                    <rect key="frame" x="67" y="7" width="57" height="30"/>
+                                                    <state key="normal" title="Coords1"/>
+                                                    <connections>
+                                                        <action selector="SetGateCoords1:" destination="Y9h-NP-Fxb" eventType="touchUpInside" id="4hH-ci-LrX"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-kH-3ll">
+                                                    <rect key="frame" x="174" y="7" width="59" height="30"/>
+                                                    <state key="normal" title="Coords2"/>
+                                                    <connections>
+                                                        <action selector="SetGateCoords2:" destination="Y9h-NP-Fxb" eventType="touchUpInside" id="6O4-wR-tMV"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="OO4-aU-OeX" firstAttribute="leading" secondItem="UIC-pN-680" secondAttribute="trailing" constant="27" id="5uT-0t-owA"/>
-                                                <constraint firstItem="OO4-aU-OeX" firstAttribute="centerY" secondItem="vpW-ud-2f4" secondAttribute="centerY" id="Kw8-mw-ddz"/>
-                                                <constraint firstItem="UIC-pN-680" firstAttribute="leading" secondItem="vpW-ud-2f4" secondAttribute="leadingMargin" id="QfK-VN-FoJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="KNn-U2-PxZ" secondAttribute="trailing" constant="55" id="Zzf-lH-h5G"/>
-                                                <constraint firstItem="UIC-pN-680" firstAttribute="centerY" secondItem="vpW-ud-2f4" secondAttribute="centerY" id="aRZ-0h-4nl"/>
-                                                <constraint firstItem="KNn-U2-PxZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OO4-aU-OeX" secondAttribute="trailing" constant="8" symbolic="YES" id="eXt-Wo-wxy"/>
-                                                <constraint firstItem="KNn-U2-PxZ" firstAttribute="centerY" secondItem="vpW-ud-2f4" secondAttribute="centerY" id="ncU-MY-gLt"/>
+                                                <constraint firstItem="UIC-pN-680" firstAttribute="centerY" secondItem="vpW-ud-2f4" secondAttribute="centerY" id="1FM-8X-2Vi"/>
+                                                <constraint firstItem="UIC-pN-680" firstAttribute="leading" secondItem="vpW-ud-2f4" secondAttribute="leadingMargin" id="2LQ-f2-lQz"/>
+                                                <constraint firstItem="sef-xh-T4Z" firstAttribute="centerY" secondItem="vpW-ud-2f4" secondAttribute="centerY" id="Dve-7R-P72"/>
+                                                <constraint firstItem="WeP-kH-3ll" firstAttribute="centerY" secondItem="vpW-ud-2f4" secondAttribute="centerY" id="HgY-78-Qbh"/>
+                                                <constraint firstItem="WeP-kH-3ll" firstAttribute="leading" secondItem="sef-xh-T4Z" secondAttribute="trailing" constant="50" id="PL7-qi-ob9"/>
+                                                <constraint firstItem="sef-xh-T4Z" firstAttribute="leading" secondItem="UIC-pN-680" secondAttribute="trailing" constant="15" id="ccu-Z0-icg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="Coords1" destination="OO4-aU-OeX" id="0JE-pu-G5g"/>
-                                            <outlet property="Coords2" destination="KNn-U2-PxZ" id="yl4-ei-GU9"/>
+                                            <outlet property="Coords1" destination="sef-xh-T4Z" id="0yt-Re-yoJ"/>
+                                            <outlet property="Coords2" destination="WeP-kH-3ll" id="hRu-PQ-ov0"/>
                                             <outlet property="GateText" destination="UIC-pN-680" id="kxy-oI-ns9"/>
                                         </connections>
                                     </tableViewCell>
@@ -288,14 +289,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SUB-8u-3GY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qMV-SH-Gry"/>
+                    <navigationItem key="navigationItem" id="qMV-SH-Gry">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="kkv-1z-nsB">
+                            <connections>
+                                <action selector="AddGate:" destination="Q0c-VQ-W79" id="1Ve-hp-Rmp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nWI-oo-bJY" id="ius-UX-Ox2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVw-Lp-3Eq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2085" y="953"/>
+            <point key="canvasLocation" x="1136" y="1037"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="1Jo-ba-n9u">
@@ -325,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uFm-F7-FRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991.25" y="137.32394366197184"/>
+            <point key="canvasLocation" x="2064" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EjC-sB-5bD">

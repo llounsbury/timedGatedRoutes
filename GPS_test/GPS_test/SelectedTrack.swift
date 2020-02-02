@@ -11,4 +11,6 @@ import Foundation
 
 class SelectedTrack {
     static var track: Route = Route()
+    
+    static var currentLocation: GPSPoint = GPSPoint(0,0)
 }

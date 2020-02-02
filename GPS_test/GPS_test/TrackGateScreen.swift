@@ -12,12 +12,20 @@ class TrackGateScreen: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func addGate(_ sender: Any) {
+        SelectedTrack.track.track.append((GPSPoint(0,0), GPSPoint(0,0)))
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    @IBAction func AddGate(_ sender: Any) {
+        SelectedTrack.track.track.append((GPSPoint(0,0), GPSPoint(0,0)))
+        self.tableView.reloadData()
     }
     
 }

@@ -57,11 +57,11 @@ class ViewController: UIViewController , CLLocationManagerDelegate{
         guard  let trueData: CLLocationCoordinate2D = manager.location?.coordinate else {return}
         self.pastLocation = GPSPoint(self.location.latitude, self.location.longitude)
         self.location = GPSPoint(trueData.latitude, trueData.longitude)
+        SelectedTrack.currentLocation = self.location
         self.lastknownlat.text = String("\(self.location.latitude)")
         self.lastknownlong.text = String("\(self.location.longitude)")
         self.lastknowntime.text = String("\(NSDate())")
         let time = NSDate().timeIntervalSince1970
-        
         if(self.route.hasPassedThroughGate(0, pastLocation, location)){
             self.timeAtStartGate = NSDate().timeIntervalSince1970
             self.lastGatePassed = 1
